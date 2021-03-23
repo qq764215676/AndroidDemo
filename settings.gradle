@@ -1,0 +1,3 @@
+include ':app'
+include ':LmcModule'
+rootProject.name = "AndroidDemo"

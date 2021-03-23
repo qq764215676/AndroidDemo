@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!--        <import type="com.yuran.androiddemo.activity.LoginActivityViewModel" />-->
+
+        <variable
+            name="vm"
+            type="com.yuran.androiddemo.activity.LoginActivityViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".activity.LoginActivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/login_account" />
+
+            <!--<EditText
+                android:id="@+id/et_account"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_account_hint"
+                android:text="13545147094" />-->
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_account_hint"
+                android:text="@={vm.account}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/login_password" />
+
+            <!--<EditText
+                android:id="@+id/et_password"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
+                android:text="@{vm.getAccount()}" />-->
+            <!--<EditText
+                android:id="@+id/et_password"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
+                android:text="@={vm._account}" />-->
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
+                android:text="12345678" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#AAAAAA"
+            android:paddingHorizontal="40dp"
+            android:text="@string/login_login" />
+
+        <Button
+            android:id="@+id/btn_debug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="40dp"
+            android:text="调试" />
+
+        <com.gudsen.library.widget.KeyboardView
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+    </LinearLayout>
+</layout>
