@@ -44,6 +44,8 @@ class PersonInfoActivity : BaseActivity(R.layout.person_info_activity) {
         btn_num99.setOnClickListener {
             cpv.progress = 99
         }
+
+        radarView.startScan()
     }
 
     override fun onDestroy() {

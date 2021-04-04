@@ -153,7 +153,7 @@ class LoginActivity : BaseActivity() {
                     按下不移动长按松开时，会产生ACTION_CANCEL事件
                     按下移动长按松开时，产生ACTION_UP事件
                      */
-                    // TODO: 3/23/21 可以判断，如果抬起时在View里面，就触发点击事件。不过看系统默认的，按下有悬浮效果，移开就没了，系统是这样的。
+                    // TODO: 3/23/21 可以判断，如果抬起时在View里面，就触发点击事件。不过看系统默认的，按下有悬浮效果，移开就没了，系统是这样的，不过也只有默认的Button背景有悬浮，一般自定义背景的没有。
                     MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                         zoomIn()
                     }
